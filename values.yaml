@@ -160,7 +160,7 @@ nodeSelector: {}
 # Redis password to use for the in-cluster redis service
 # Enable redis to use in-cluster redis
 redis:
-  enabled: true
+  enabled: false
   # External Redis option will be enabled if in-cluster redis is disabled
   external:
     host: "<EXTERNAL-REDIS-HOST-NAME>"
@@ -178,7 +178,7 @@ redis:
 # Minio access/secret keys for the in-cluster S3 usage
 # Minio is not exposed publically
 minio:
-  enabled: true
+  enabled: false
   imageTag: RELEASE.2018-06-09T02-18-09Z
   serviceType: ClusterIP
   accessKey: spinnakeradmin

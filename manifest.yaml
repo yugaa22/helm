@@ -1,0 +1,5 @@
+name: yuga
+version: 1.0.0
+description: versdion conntol
+metadata:
+  namespace: kube

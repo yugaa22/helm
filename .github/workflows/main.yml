@@ -1,0 +1,25 @@
+name: Secret Scanner
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  secret_scan:
+    name: Scan for Secrets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+
+      - name: Fail if secrets found
+        if: steps.gitleaks.outputs.exitcode != 0
+        run: |
+          echo "❌ Secrets were detected in this commit. Push is blocked."
+          exit 1

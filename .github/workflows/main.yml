@@ -8,6 +8,20 @@ on:
   pull_request:
 
 jobs:
+
+  secrets-scan:
+    name: Secrets Scan — Trivy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aquasecurity/trivy-action@v0.35.0
+        with:
+          scan-type: fs
+          scan-ref: .
+          format: table
+          exit-code: '1'
+          severity: HIGH,CRITICAL
+          
   secret_scanner:
     name: Secret Scanner
     runs-on: ubuntu-latest

@@ -9,7 +9,7 @@
             "date": "2026-05-29T10:03:59.027043Z",
             "requires": "clouddriver>=0.0.0,echo>=0.0.0,fiat>=0.0.0,front50>=0.0.0,gate>=0.0.0,igor>=0.0.0,kayenta>=0.0.0,orca>=0.0.0,rosco>=0.0.0",
             "sha512sum": "71718674528a5df6d0a57cebe75e8869da739cb1f22296cbb37a9b74cfde9a08b0e3621b485156d925298ae816964244b6ad4558fd7bdce9e8bbea0bc857439a",
-            "url": "https://github.com/yugaa22/helm/releases/download/v0.0.1/armory-observability-plugin-v1.0.9.zip"
+            "url": "https://github.com/yugaa22/helm/releases/download/v0.0.6/armory-observability-plugin-v1.0.9.zip"
 
         }
     ]
